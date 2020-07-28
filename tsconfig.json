@@ -8,7 +8,7 @@
         "downlevelIteration": true,
         "experimentalDecorators": true,
         "esModuleInterop": true,
-        "module": "commonjs",
+        "module": "esnext",
         "moduleResolution": "node",
         "importHelpers": true,
         "target": "es2015",

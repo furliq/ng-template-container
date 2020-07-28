@@ -1,6 +1,6 @@
 {
   "name": "ng-template-container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A helper for recycling ng-templates.",
   "scripts": {
     "ng": "ng",
@@ -44,5 +44,9 @@
     "ng-container"
   ],
   "author": "Fred Erlikh",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fredism/ng-template-container.git"
+  }
 }

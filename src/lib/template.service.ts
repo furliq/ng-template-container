@@ -10,14 +10,15 @@ type TemplateDict = { [key: string]: TemplateRef<any> };
 export class TemplateService {
   private _templates: TemplateDict = {};
   private readonly _templateMap = new Map<Function, TemplateDict>();
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) {
-    this._templateMap.set(undefined, this.templates);
-  }
+  constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
   get templates() {
     return this._templates;
   }
 
-  localTemplates(templateKey: TemplateKey) {
+  localTemplates(templateKey?: TemplateKey) {
+    if(!templateKey || !templateKey.modules || !templateKey.modules.length) {
+      return this.templates;
+    }
     const { modules } = templateKey;
     return Object.assign({}, ...modules.map(mod => {
       if (!this._templateMap.has(mod)) {
@@ -30,6 +31,7 @@ export class TemplateService {
   registerTemplates(templates, templateKey?: TemplateKey) {
     const mod = templateKey ? templateKey.modules.slice().pop() : undefined;
     this._templateMap.set(mod, templates);
+    if(!mod) this._templates = templates;
   }
 
   loadTemplates(templateKey: TemplateKey) {
