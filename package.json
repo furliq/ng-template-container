@@ -1,0 +1,48 @@
+{
+  "name": "ng-template-container",
+  "version": "1.0.0",
+  "description": "A helper for recycling ng-templates.",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "peerDependencies": {
+    "@angular/core": "^10.0.5"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.1000.4",
+    "@angular-devkit/build-ng-packagr": "^0.1000.4",
+    "@angular/animations": "^10.0.1",
+    "@angular/cli": "^10.0.4",
+    "@angular/common": "^10.0.1",
+    "@angular/compiler": "^10.0.1",
+    "@angular/compiler-cli": "^10.0.5",
+    "@angular/core": "^10.0.5",
+    "@angular/forms": "^10.0.1",
+    "@angular/language-service": "^10.0.5",
+    "@angular/platform-browser": "^10.0.1",
+    "@angular/platform-browser-dynamic": "^10.0.1",
+    "@angular/router": "^10.0.1",
+    "ng-packagr": "^10.0.3",
+    "rxjs": "^6.5.5",
+    "ts-node": "^8.10.2",
+    "tsickle": "^0.39.1",
+    "tslib": "^2.0.0",
+    "tslint": "~5.11.0",
+    "typescript": "^3.9.7",
+    "zone.js": "^0.10.3"
+  },
+  "keywords": [
+    "angular",
+    "ivy",
+    "template",
+    "ng-template",
+    "ng-container"
+  ],
+  "author": "Fred Erlikh",
+  "license": "MIT"
+}
