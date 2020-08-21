@@ -20,7 +20,7 @@ export class TemplateService {
       return this.templates;
     }
     const { modules } = templateKey;
-    return Object.assign({}, ...modules.map(mod => {
+    return Object.assign({}, this.templates, ...modules.map(mod => {
       if (!this._templateMap.has(mod)) {
         this._templateMap.set(mod, {});
       }
